@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ArreglaYa conecta hogares con técnicos confiables para reparaciones y mantenimiento en Ciudad de Guatemala."
+    />
+    <title>ArreglaYa — El técnico que necesitas, cuando lo necesitas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="demo-ribbon" role="note">
+      <span>Prototipo académico</span>
+      <p>Perfiles, calificaciones y solicitudes son datos demostrativos.</p>
+    </div>
+
+    <header class="site-header" id="inicio">
+      <div class="nav-shell">
+        <a class="brand" href="#inicio" aria-label="ArreglaYa, ir al inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" role="img">
+              <path d="M11 25.5 18 8l7 17.5M14 19h8" />
+              <path d="m23.8 8.8 2 2 4.7-4.7" />
+            </svg>
+          </span>
+          <span>Arregla<span>Ya</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          <a href="#servicios">Servicios</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#tecnicos">Técnicos</a>
+          <a href="#confianza">Confianza y seguridad</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="button button-ghost desktop-only" id="loginDemo">
+            Iniciar sesión
+          </button>
+          <button class="button button-primary desktop-only" data-open-request>
+            Solicitar servicio
+          </button>
+          <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#tecnicos">Técnicos</a>
+        <a href="#confianza">Confianza y seguridad</a>
+        <button class="button button-primary" data-open-request>Solicitar servicio</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Técnicos confiables cerca de ti
+          </div>
+          <h1>Tu hogar en buenas manos, <em>sin complicaciones.</em></h1>
+          <p class="hero-lead">
+            Encuentra profesionales disponibles, conoce su experiencia y solicita
+            la reparación que necesitas desde un solo lugar.
+          </p>
+
+          <div class="quick-search" aria-label="Buscador de técnicos">
+            <label>
+              <span>¿Qué necesitas?</span>
+              <select id="heroService">
+                <option value="Todos">Selecciona un servicio</option>
+                <option value="Plomería">Plomería</option>
+                <option value="Electricidad">Electricidad</option>
+                <option value="Carpintería">Carpintería</option>
+                <option value="Electrodomésticos">Electrodomésticos</option>
+              </select>
+            </label>
+            <span class="search-divider" aria-hidden="true"></span>
+            <label>
+              <span>Tu zona</span>
+              <select id="heroZone">
+                <option>Ciudad de Guatemala</option>
+                <option>Zona 1</option>
+                <option>Zona 10</option>
+                <option>Zona 11</option>
+                <option>Zona 14</option>
+                <option>Zona 15</option>
+              </select>
+            </label>
+            <button class="search-button" id="heroSearch" aria-label="Buscar técnicos">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+              </svg>
+              <span>Buscar técnicos</span>
+            </button>
+          </div>
+
+          <div class="hero-assurances" aria-label="Beneficios principales">
+            <span><i>✓</i> Perfiles verificados</span>
+            <span><i>✓</i> Opiniones transparentes</span>
+            <span><i>✓</i> Solicitud sin compromiso</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Vista previa de la plataforma">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+
+          <div class="phone-card">
+            <div class="phone-topbar">
+              <div>
+                <span>Buenos días 👋</span>
+                <strong>¿Qué necesitas reparar?</strong>
+              </div>
+              <span class="mini-avatar">MR</span>
+            </div>
+
+            <div class="phone-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+              </svg>
+              Buscar un servicio
+            </div>
+
+            <div class="phone-label-row">
+              <strong>Servicios populares</strong><span>Ver todos</span>
+            </div>
+            <div class="phone-services">
+              <div><span>🚰</span><small>Plomería</small></div>
+              <div><span>⚡</span><small>Electricidad</small></div>
+              <div><span>🪚</span><small>Carpintería</small></div>
+              <div><span>🧊</span><small>Electrodomésticos</small></div>
+            </div>
+
+            <div class="phone-label-row">
+              <strong>Técnicos cerca de ti</strong><span>2 disponibles</span>
+            </div>
+            <article class="mini-profile">
+              <div class="avatar avatar-blue">CM</div>
+              <div>
+                <strong>Carlos Méndez <b>✓</b></strong>
+                <span>Electricista · Zona 10</span>
+                <span class="mini-rating">★ 4.9 <i>(48 reseñas)</i></span>
+              </div>
+              <button aria-label="Ver perfil de Carlos">›</button>
+            </article>
+            <article class="mini-profile">
+              <div class="avatar avatar-orange">AL</div>
+              <div>
+                <strong>Ana Lucía Pérez <b>✓</b></strong>
+                <span>Plomería · Zona 14</span>
+                <span class="mini-rating">★ 4.8 <i>(35 reseñas)</i></span>
+              </div>
+              <button aria-label="Ver perfil de Ana Lucía">›</button>
+            </article>
+          </div>
+
+          <div class="availability-card floating-card">
+            <span class="pulse"></span>
+            <div><strong>Respuesta rápida</strong><small>Promedio menor a 10 min</small></div>
+          </div>
+          <div class="verified-card floating-card">
+            <span>✓</span>
+            <div><strong>Identidad verificada</strong><small>Perfil revisado</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Indicadores del prototipo">
+        <div class="section-shell trust-grid">
+          <div><strong>4</strong><span>Categorías principales</span></div>
+          <div><strong>3 pasos</strong><span>Para solicitar ayuda</span></div>
+          <div><strong>100%</strong><span>Perfiles demostrativos</span></div>
+          <div><strong>24/7</strong><span>Prototipo disponible</span></div>
+        </div>
+      </section>
+
+      <section class="services-section section-shell" id="servicios">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">SERVICIOS PARA TU HOGAR</span>
+            <h2>¿Qué necesitas resolver hoy?</h2>
+          </div>
+          <p>
+            Selecciona una categoría para conocer profesionales demostrativos con
+            experiencia en el trabajo que necesitas.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <button class="service-card reveal" data-category="Plomería">
+            <span class="service-icon service-blue">🚰</span>
+            <span class="service-card-copy">
+              <strong>Plomería</strong>
+              <small>Fugas, tuberías, drenajes y más</small>
+            </span>
+            <span class="arrow">↗</span>
+          </button>
+          <button class="service-card reveal" data-category="Electricidad">
+            <span class="service-icon service-yellow">⚡</span>
+            <span class="service-card-copy">
+              <strong>Electricidad</strong>
+              <small>Instalaciones, fallas y cableado</small>
+            </span>
+            <span class="arrow">↗</span>
+          </button>
+          <button class="service-card reveal" data-category="Carpintería">
+            <span class="service-icon service-orange">🪚</span>
+            <span class="service-card-copy">
+              <strong>Carpintería</strong>
+              <small>Muebles, puertas y reparaciones</small>
+            </span>
+            <span class="arrow">↗</span>
+          </button>
+          <button class="service-card reveal" data-category="Electrodomésticos">
+            <span class="service-icon service-purple">🧊</span>
+            <span class="service-card-copy">
+              <strong>Electrodomésticos</strong>
+              <small>Refrigeradoras, lavadoras y más</small>
+            </span>
+            <span class="arrow">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="steps-section" id="como-funciona">
+        <div class="section-shell">
+          <div class="center-heading reveal">
+            <span class="section-kicker">ASÍ DE FÁCIL</span>
+            <h2>Resuelve tu reparación en tres pasos</h2>
+            <p>Un proceso simple, claro y pensado para darte tranquilidad.</p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <span class="step-number">01</span>
+              <div class="step-visual step-search">
+                <span>🚰</span><span>⚡</span><span>🪚</span>
+              </div>
+              <h3>Cuéntanos qué necesitas</h3>
+              <p>Elige el servicio, describe el problema e indica dónde y cuándo necesitas ayuda.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">02</span>
+              <div class="step-visual step-profile">
+                <span class="avatar avatar-blue">CM</span>
+                <div><b>Carlos Méndez ✓</b><small>★ 4.9 · Electricista</small></div>
+              </div>
+              <h3>Compara con confianza</h3>
+              <p>Revisa perfiles, experiencia, referencias, calificaciones y disponibilidad.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">03</span>
+              <div class="step-visual step-confirm">
+                <span>✓</span>
+                <div><b>Solicitud enviada</b><small>Te confirmaremos pronto</small></div>
+              </div>
+              <h3>Solicita y da seguimiento</h3>
+              <p>Selecciona a tu técnico y recibe el estado de tu solicitud desde la plataforma.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="technicians-section section-shell" id="tecnicos">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">PROFESIONALES DESTACADOS</span>
+            <h2>Conoce a nuestros técnicos</h2>
+          </div>
+          <p>Perfiles ilustrativos para mostrar cómo funcionará la comparación en ArreglaYa.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filtrar técnicos por categoría">
+          <button class="filter-chip active" data-filter="Todos">Todos</button>
+          <button class="filter-chip" data-filter="Plomería">Plomería</button>
+          <button class="filter-chip" data-filter="Electricidad">Electricidad</button>
+          <button class="filter-chip" data-filter="Carpintería">Carpintería</button>
+          <button class="filter-chip" data-filter="Electrodomésticos">Electrodomésticos</button>
+        </div>
+
+        <div class="technician-grid" id="technicianGrid" aria-live="polite"></div>
+
+        <p class="demo-note">
+          <span>i</span> Los nombres, fotografías representadas por iniciales, calificaciones y
+          experiencia mostrados son ficticios y se utilizan únicamente con fines académicos.
+        </p>
+      </section>
+
+      <section class="safety-section" id="confianza">
+        <div class="section-shell safety-layout">
+          <div class="safety-visual reveal">
+            <div class="shield">
+              <svg viewBox="0 0 120 140" aria-hidden="true">
+                <path d="M60 8 108 26v38c0 31-19 54-48 68C31 118 12 95 12 64V26L60 8Z" />
+                <path d="m37 69 15 15 31-33" />
+              </svg>
+            </div>
+            <div class="safety-badge safety-badge-one"><span>✓</span> Identidad revisada</div>
+            <div class="safety-badge safety-badge-two"><span>★</span> Opiniones visibles</div>
+            <div class="safety-badge safety-badge-three"><span>⌁</span> Información clara</div>
+          </div>
+
+          <div class="safety-copy reveal">
+            <span class="section-kicker section-kicker-light">CONFIANZA DESDE EL PRIMER CLIC</span>
+            <h2>Tu tranquilidad es nuestra prioridad</h2>
+            <p>
+              ArreglaYa está diseñado para darte más información antes de contratar.
+              Queremos que tomes decisiones con seguridad y sin sorpresas.
+            </p>
+            <ul class="safety-list">
+              <li>
+                <span>✓</span>
+                <div><strong>Verificación de identidad</strong><small>Proceso contemplado para validar la identidad de cada técnico.</small></div>
+              </li>
+              <li>
+                <span>★</span>
+                <div><strong>Calificaciones transparentes</strong><small>Consulta experiencias de clientes después de cada servicio.</small></div>
+              </li>
+              <li>
+                <span>▣</span>
+                <div><strong>Perfiles completos</strong><small>Experiencia, especialidades, zonas y disponibilidad en un solo lugar.</small></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="technician-cta section-shell">
+        <div class="technician-cta-card reveal">
+          <div>
+            <span class="section-kicker">PARA PROFESIONALES</span>
+            <h2>¿Eres técnico? Haz crecer tu trabajo con ArreglaYa.</h2>
+            <p>Obtén mayor visibilidad, encuentra nuevos clientes y fortalece tu reputación profesional.</p>
+            <button class="button button-dark" id="technicianSignup">Quiero registrarme como técnico</button>
+          </div>
+          <div class="cta-illustration" aria-hidden="true">
+            <div class="toolbox">🧰</div>
+            <div class="cta-stat"><span>↗</span><div><strong>Más oportunidades</strong><small>Haz visible tu experiencia</small></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section section-shell">
+        <div class="center-heading reveal">
+          <span class="section-kicker">PREGUNTAS FRECUENTES</span>
+          <h2>Todo claro antes de empezar</h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>¿ArreglaYa ya ofrece servicios reales?<span>+</span></summary>
+            <p>No. Esta versión es un prototipo académico creado para validar la idea y demostrar cómo funcionaría la experiencia.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo se verificarían los técnicos?<span>+</span></summary>
+            <p>La propuesta contempla revisión de identidad, referencias y datos profesionales antes de identificar un perfil como verificado.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo ganaría dinero la plataforma?<span>+</span></summary>
+            <p>El modelo propuesto cobra una comisión por cada servicio completado. Más adelante podrían ofrecerse planes de suscripción para técnicos.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Dónde estaría disponible inicialmente?<span>+</span></summary>
+            <p>La primera etapa está pensada para Ciudad de Guatemala, con posibilidad de ampliar la cobertura en fases posteriores.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing-cta">
+        <div class="section-shell closing-content reveal">
+          <span>Tu hogar merece soluciones simples.</span>
+          <h2>Encuentra al técnico indicado para cada reparación.</h2>
+          <button class="button button-white" data-open-request>Probar el prototipo <span>→</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div>
+          <a class="brand brand-footer" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M11 25.5 18 8l7 17.5M14 19h8" /><path d="m23.8 8.8 2 2 4.7-4.7" /></svg>
+            </span>
+            <span>Arregla<span>Ya</span></span>
+          </a>
+          <p>El técnico que necesitas, cuando lo necesitas.</p>
+        </div>
+        <div><strong>Explora</strong><a href="#servicios">Servicios</a><a href="#tecnicos">Técnicos</a><a href="#como-funciona">Cómo funciona</a></div>
+        <div><strong>Confianza</strong><a href="#confianza">Seguridad</a><a href="#confianza">Verificación</a><a href="#tecnicos">Opiniones</a></div>
+        <div><strong>Proyecto</strong><a href="#inicio">Acerca de</a><a href="#inicio">Contacto</a><a href="#inicio">Privacidad</a></div>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>© 2026 ArreglaYa · Prototipo académico</span>
+        <span>Juan Jose Rivas Alvarez · Carnet 24856</span>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="requestModal" aria-hidden="true">
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" data-close-modal aria-label="Cerrar">×</button>
+        <div class="modal-progress"><span id="progressBar"></span></div>
+
+        <div class="modal-step active" data-step="1">
+          <span class="modal-kicker">PASO 1 DE 3</span>
+          <h2 id="modalTitle">¿Qué necesitas reparar?</h2>
+          <p>Selecciona la categoría que mejor describe el problema.</p>
+          <div class="modal-service-grid">
+            <button data-modal-service="Plomería"><span>🚰</span>Plomería</button>
+            <button data-modal-service="Electricidad"><span>⚡</span>Electricidad</button>
+            <button data-modal-service="Carpintería"><span>🪚</span>Carpintería</button>
+            <button data-modal-service="Electrodomésticos"><span>🧊</span>Electrodomésticos</button>
+          </div>
+          <button class="button button-primary modal-next" data-next disabled>Continuar →</button>
+        </div>
+
+        <div class="modal-step" data-step="2">
+          <span class="modal-kicker">PASO 2 DE 3</span>
+          <h2>Cuéntanos un poco más</h2>
+          <p>Esta información ayudará a encontrar una mejor coincidencia.</p>
+          <label class="form-field">
+            <span>Describe el problema</span>
+            <textarea id="problemDescription" rows="4" placeholder="Ej.: El lavatrastos tiene una fuga debajo del mueble..."></textarea>
+          </label>
+          <div class="form-row">
+            <label class="form-field"><span>Zona</span><select id="requestZone"><option value="">Seleccionar</option><option>Zona 1</option><option>Zona 10</option><option>Zona 11</option><option>Zona 14</option><option>Zona 15</option></select></label>
+            <label class="form-field"><span>¿Cuándo?</span><select id="requestTime"><option>Lo antes posible</option><option>Hoy por la tarde</option><option>Mañana</option><option>Esta semana</option></select></label>
+          </div>
+          <div class="modal-actions"><button class="button button-ghost" data-back>← Atrás</button><button class="button button-primary" data-next>Buscar técnicos →</button></div>
+        </div>
+
+        <div class="modal-step" data-step="3">
+          <div class="success-icon">✓</div>
+          <span class="modal-kicker">SIMULACIÓN COMPLETADA</span>
+          <h2>¡Solicitud demostrativa creada!</h2>
+          <p>En una versión real, ahora recibirías opciones de técnicos disponibles y podrías comparar sus perfiles.</p>
+          <div class="request-summary">
+            <div><span>Servicio</span><strong id="summaryService">—</strong></div>
+            <div><span>Ubicación</span><strong id="summaryZone">Por confirmar</strong></div>
+            <div><span>Estado</span><strong class="status-pill">Buscando coincidencias</strong></div>
+          </div>
+          <button class="button button-primary modal-done" data-close-modal>Finalizar demostración</button>
+          <small class="modal-disclaimer">Esta solicitud no será enviada. ArreglaYa aún no opera comercialmente.</small>
+        </div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
